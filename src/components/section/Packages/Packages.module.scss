@@ -1,0 +1,25 @@
+@import '../../../styles/share/variables';
+
+.packages {
+  .header {
+    margin: 77px 0 65px;
+  }
+
+  .slide {
+    max-width: 420px;
+    width: 100%;
+  }
+
+  .picnicHeader {
+    width: 100%;
+    border-top: 1px solid $primary-color;
+    padding-top: 13px;
+    margin-top: 37px;
+    font-size: 48px;
+    text-align: left;
+  }
+
+  .image {
+    width: 100%;
+  }
+}
