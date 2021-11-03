@@ -1,0 +1,107 @@
+@import '../../../styles/share/variables';
+
+.welcome {
+  padding: 157px 0 90px;
+  position: relative;
+
+  .inner {
+    padding: 96px 0;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  .background {
+    object-fit: cover;
+    &__container {
+      position: absolute;
+      top: 0;
+      right: 0;
+      z-index: -1;
+      height: 100%;
+      width: 38.5%;
+      overflow: hidden;
+      background-color: $rose-white;
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+    }
+  }
+
+  .header {
+    text-align: left;
+    max-width: 507px;
+    margin-bottom: 57px;
+  }
+
+  .image {
+    object-fit: cover;
+    &__container {
+      width: 100%;
+      height: 100%;
+      position: relative;
+    }
+  }
+
+  .link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    border: 1.5px solid $primary-color;
+    width: 306px;
+    height: 47px;
+    border-radius: 50%;
+    transform: rotate(-3.57deg);
+    transition: $mid-transition;
+
+    .label {
+      position: absolute;
+      text-decoration: none;
+      color: $primary-color;
+      font-weight: 300;
+      font-size: 18px;
+      top: 50%;
+      left: 50%;
+      transform: translateX(-50%) translateY(-50%) rotate(3.57deg);
+      transition: $mid-transition;
+    }
+
+    &:hover {
+      color: $white;
+      background-color: $primary-color;
+      transform: rotate(3.57deg);
+
+      .label {
+        color: $white;
+        transform: translateX(-50%) translateY(-50%) rotate(-3.57deg);
+      }
+    }
+  }
+
+  .nav {
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    flex-direction: column;
+    height: 100%;
+  }
+
+  .social {
+    margin-bottom: 25px;
+    transition: $mid-transition;
+    background-color: $rose-white;
+    border-radius: 50%;
+    width: 41px;
+    height: 41px;
+    position: relative;
+
+    &:last-of-type {
+      margin-bottom: 0;
+    }
+
+    &:hover {
+      transform: rotate(17deg);
+    }
+  }
+}

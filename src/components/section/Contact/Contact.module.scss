@@ -1,0 +1,115 @@
+@import '../../../styles/share/variables';
+
+.contact {
+  margin: 65px 0;
+
+  .header {
+    padding-bottom: 33px;
+  }
+
+  .description {
+    font-family: $font-family;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 29px;
+    margin: 32px 0 41px;
+    max-width: 540px;
+  }
+
+  .body {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+  }
+
+  .social {
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+
+    &__item {
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      margin-bottom: 50px;
+      padding-bottom: 50px;
+      width: 100%;
+      border-bottom: 1px solid $bouquet;
+
+      &:hover {
+        .link {
+          color: $primary-color;
+        }
+
+        .image {
+          transform: rotate(17deg);
+        }
+      }
+
+      &:last-of-type {
+        margin-bottom: 0;
+        border-bottom: none;
+        padding-bottom: 0;
+      }
+    }
+
+    .image {
+      transition: $mid-transition;
+      background-color: $rose-white;
+      border-radius: 50%;
+    }
+
+    .link {
+      color: $black;
+      font-size: 24px;
+      transition: $mid-transition;
+      margin-left: 1rem;
+    }
+  }
+
+  .form {
+    max-width: 570px;
+    background-color: $rose-white;
+    padding: 0 42px 32px;
+
+    .input_group {
+      margin-bottom: 27px;
+      display: flex;
+      justify-content: flex-end;
+      flex-direction: column;
+
+      &:last-of-type {
+        margin-bottom: 0;
+      }
+    }
+
+    .label {
+      margin-bottom: 11px;
+      font-size: 14px;
+    }
+
+    .input {
+      border: 1px solid $bouquet;
+      background-color: $rose-white;
+      font-size: 16px;
+      padding: 1.5rem 16px;
+    }
+
+    .submit {
+      border: 1px solid transparent;
+      width: 100%;
+      background-color: $primary-color;
+      color: $white;
+      padding: 19px 0;
+      text-align: center;
+      cursor: pointer;
+      transition: $mid-transition;
+
+      &:hover {
+        background-color: transparent;
+        border: 1px solid $primary-color;
+        color: $primary-color;
+      }
+    }
+  }
+}

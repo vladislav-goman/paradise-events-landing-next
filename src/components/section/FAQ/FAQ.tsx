@@ -1,0 +1,97 @@
+import React from 'react';
+import * as Accordion from '@radix-ui/react-accordion';
+import classes from './FAQ.module.scss';
+
+const PlusSign: React.FC = () => {
+  return (
+    <div className={classes.plus}>
+      <div className={classes.vertical}></div>
+      <div className={classes.horizontal}></div>
+    </div>
+  );
+};
+
+export const FAQ: React.FC = () => {
+  return (
+    <section className={classes.faq} id="faq">
+      <div className="container">
+        <div className="row">
+          <div className="col-md-12">
+            <h2 data-animate="animate__fadeIn" className={classes.header}>
+              FAQ
+            </h2>
+            <Accordion.Root type="single" collapsible>
+              <Accordion.Item
+                data-animate="animate__fadeInRight"
+                className={classes.item}
+                value="item-1"
+              >
+                <Accordion.Header>
+                  <Accordion.Trigger className={classes.trigger}>
+                    <h3 className={classes.acc__header}>
+                      Doest the Paradise Events Planner staff stay during my
+                      picnic?
+                    </h3>
+                    <PlusSign />
+                  </Accordion.Trigger>
+                </Accordion.Header>
+                <Accordion.Content className={classes.content}>
+                  <p>
+                    If you would like to leave earlier than the arranged time,
+                    please provide us a 30 min notice via phone call or text.
+                    You are responsible for the picnic items until we are able
+                    to return and pack up
+                  </p>
+                </Accordion.Content>
+              </Accordion.Item>
+              <Accordion.Item
+                data-animate="animate__fadeInLeft"
+                className={classes.item}
+                value="item-2"
+              >
+                <Accordion.Header>
+                  <Accordion.Trigger className={classes.trigger}>
+                    <h3 className={classes.acc__header}>
+                      What is your cancellation policy?
+                    </h3>
+                    <PlusSign />
+                  </Accordion.Trigger>
+                </Accordion.Header>
+                <Accordion.Content className={classes.content}>
+                  <p>
+                    If you would like to leave earlier than the arranged time,
+                    please provide us a 30 min notice via phone call or text.
+                    You are responsible for the picnic items until we are able
+                    to return and pack up
+                  </p>
+                </Accordion.Content>
+              </Accordion.Item>
+              <Accordion.Item
+                data-animate="animate__fadeInRight"
+                className={classes.item}
+                value="item-3"
+              >
+                <Accordion.Header>
+                  <Accordion.Trigger className={classes.trigger}>
+                    <h3 className={classes.acc__header}>
+                      Can we leave whenever we want?
+                    </h3>
+                    <PlusSign />
+                  </Accordion.Trigger>
+                </Accordion.Header>
+                <Accordion.Content className={classes.content}>
+                  <p>
+                    If you would like to leave earlier than the arranged time,
+                    please provide us a 30 min notice via phone call or text.
+                    You are responsible for the picnic items until we are able
+                    to return and pack up
+                  </p>
+                </Accordion.Content>
+              </Accordion.Item>
+            </Accordion.Root>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+};
