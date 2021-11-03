@@ -1,0 +1,58 @@
+@import '../../../styles/share/variables';
+
+.about {
+  .header {
+    margin: 65px 0;
+  }
+
+  .paragraph {
+    color: $black;
+    line-height: 38px;
+  }
+
+  .highlight {
+    font-family: $header-font-family;
+    font-size: 32px;
+    font-weight: 600;
+    color: $primary-color;
+    font-style: italic;
+  }
+
+  .emoji {
+    position: relative;
+  }
+
+  .container {
+    position: relative;
+    height: 100%;
+    margin-right: 90px;
+  }
+
+  .background {
+    width: 100%;
+    max-width: 430px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    z-index: 1;
+  }
+
+  .image {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    max-width: 315px;
+    height: 100%;
+    z-index: 2;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+  }
+
+  .pic {
+    object-fit: contain;
+    width: 100%;
+  }
+}

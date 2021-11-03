@@ -11,6 +11,27 @@
 }
 
 @font-face {
+  font-family: 'Cormorant';
+  font-weight: 400;
+  font-style: italic;
+  src: url('../../fonts/Cormorant-Italic.ttf');
+}
+
+@font-face {
+  font-family: 'Cormorant';
+  font-weight: 500;
+  font-style: italic;
+  src: url('../../fonts/Cormorant-MediumItalic.ttf');
+}
+
+@font-face {
+  font-family: 'Cormorant';
+  font-weight: 600;
+  font-style: italic;
+  src: url('../../fonts/Cormorant-SemiBoldItalic.ttf');
+}
+
+@font-face {
   font-family: 'Inter';
   font-weight: 300;
   src: url('../../fonts/Inter-Light.ttf');

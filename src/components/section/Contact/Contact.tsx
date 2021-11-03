@@ -10,7 +10,7 @@ export const Contact: React.FC = () => {
         <div className="row">
           <div className="col-md-12">
             <div className="contact--inner">
-              <h2 data-animate="animate__fadeIn" className={classes.contact}>
+              <h2 data-animate="animate__fadeIn" className={classes.header}>
                 Contact us
               </h2>
               <div className={classes.body}>
