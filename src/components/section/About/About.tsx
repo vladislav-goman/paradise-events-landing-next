@@ -2,7 +2,10 @@
 import React from 'react';
 import Image from 'next/image';
 import classes from './About.module.scss';
-import { loader } from '../../../utility/loader';
+import HeartIcon from '../../../images/heart-icon.png';
+import StarsIcon from '../../../images/stars-icon.png';
+import BackgroundImage from '../../../images/about-us-background.png';
+import FrontImage from '../../../images/about-us-image.png';
 
 export const About: React.FC = () => {
   return (
@@ -18,16 +21,16 @@ export const About: React.FC = () => {
                 data-animate="animate__fadeInLeft"
                 className={classes.background}
               >
-                <img
+                <Image
                   className={classes.pic}
-                  src="/images/about-us-background.png"
+                  src={BackgroundImage}
                   alt="Stars Emoji"
                 />
               </div>
               <div data-animate="animate__fadeInLeft" className={classes.image}>
-                <img
+                <Image
                   className={classes.pic}
-                  src="/images/about-us-image.png"
+                  src={FrontImage}
                   alt="Stars Emoji"
                 />
               </div>
@@ -46,8 +49,7 @@ export const About: React.FC = () => {
               turn all your ideas and desires into reality.
               <Image
                 className={classes.emoji}
-                loader={loader}
-                src="/images/stars-icon.png"
+                src={StarsIcon}
                 width="24"
                 height="24"
                 alt="Stars Emoji"
@@ -71,8 +73,7 @@ export const About: React.FC = () => {
               Marta and Kristina, with love from Paradise Events Planner{' '}
               <Image
                 className={classes.emoji}
-                loader={loader}
-                src="/images/heart-icon.png"
+                src={HeartIcon}
                 width="24"
                 height="24"
                 alt="Heart Emoji"

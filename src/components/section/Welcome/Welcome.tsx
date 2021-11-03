@@ -2,7 +2,12 @@ import React from 'react';
 import Image from 'next/image';
 import cx from 'classnames';
 import classes from './Welcome.module.scss';
-import { loader } from '../../../utility/loader';
+import backgroundImage from '../../../images/welcome-background.png';
+import welcomeImage from '../../../images/welcome-image.png';
+import EmailIcon from '../../../images/EmailIcon.png';
+import InstagramIcon from '../../../images/InstagramIcon.png';
+import FacebookIcon from '../../../images/FacebookIcon.png';
+import HeartIcon from '../../../images/sparkling-heart.png';
 
 export const Welcome: React.FC = () => {
   return (
@@ -11,8 +16,7 @@ export const Welcome: React.FC = () => {
     >
       <div className={classes.background__container}>
         <Image
-          loader={loader}
-          src="/images/welcome-background.png"
+          src={backgroundImage}
           alt="Decorative image"
           layout="fill"
           className={classes.background}
@@ -25,8 +29,7 @@ export const Welcome: React.FC = () => {
               <h2 className={classes.header}>
                 Brighten up your event with Paradise Events Planner{' '}
                 <Image
-                  loader={loader}
-                  src="/images/sparkling-heart.png"
+                  src={HeartIcon}
                   width="39"
                   height="39"
                   alt="Sparkling Heart Emoji"
@@ -40,8 +43,7 @@ export const Welcome: React.FC = () => {
           <div className="col-md-5">
             <div className={classes.image__container}>
               <Image
-                loader={loader}
-                src="/images/welcome-image.png"
+                src={welcomeImage}
                 layout="fill"
                 alt="Picture of a nicely served outdoors dining table"
                 className={classes.image}
@@ -54,12 +56,7 @@ export const Welcome: React.FC = () => {
                 href="mailto:paradiseeventsplanner@gmail.com"
                 className={classes.social}
               >
-                <Image
-                  loader={loader}
-                  src="/images/EmailIcon.png"
-                  layout="fill"
-                  alt="Email sign"
-                />
+                <Image src={EmailIcon} layout="fill" alt="Email sign" />
               </a>
               <a
                 href="https://www.instagram.com/paradiseeventsplanner/"
@@ -67,12 +64,7 @@ export const Welcome: React.FC = () => {
                 className={classes.social}
                 rel="noreferrer"
               >
-                <Image
-                  loader={loader}
-                  src="/images/InstagramIcon.png"
-                  layout="fill"
-                  alt="Instagram logo"
-                />
+                <Image src={InstagramIcon} layout="fill" alt="Instagram logo" />
               </a>
               <a
                 href="https://www.facebook.com/Paradiseeventsplanner"
@@ -80,12 +72,7 @@ export const Welcome: React.FC = () => {
                 className={classes.social}
                 rel="noreferrer"
               >
-                <Image
-                  loader={loader}
-                  src="/images/FacebookIcon.png"
-                  layout="fill"
-                  alt="Facebook logo"
-                />
+                <Image src={FacebookIcon} layout="fill" alt="Facebook logo" />
               </a>
             </nav>
           </div>

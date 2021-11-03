@@ -4,7 +4,8 @@ import Link from 'next/link';
 import AnchorLink from 'react-anchor-link-smooth-scroll';
 import cx from 'classnames';
 import classes from './Header.module.scss';
-import { loader } from '../../../utility/loader';
+import PhoneIcon from '../../../images/telephone-icon.png';
+import Logo from '../../../images/logo.svg';
 
 export const Header: React.FC = () => {
   const [isActive, setIsActive] = useState(false);
@@ -39,8 +40,7 @@ export const Header: React.FC = () => {
             <div className={classes.inner}>
               <div className={classes.logo__container}>
                 <Image
-                  loader={loader}
-                  src="/images/logo.svg"
+                  src={Logo}
                   width="58px"
                   height="58px"
                   alt="Paradise Events Planner Logo"
@@ -55,8 +55,7 @@ export const Header: React.FC = () => {
               <Link href="tel:+18184046994">
                 <a className={classes.phone}>
                   <Image
-                    loader={loader}
-                    src="/images/telephone-icon.png"
+                    src={PhoneIcon}
                     width="20"
                     height="20"
                     alt="Telephone icon"

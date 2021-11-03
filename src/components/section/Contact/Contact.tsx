@@ -1,7 +1,9 @@
 import React from 'react';
 import Image from 'next/image';
 import classes from './Contact.module.scss';
-import { loader } from '../../../utility/loader';
+import EmailIcon from '../../../images/EmailIcon.png';
+import InstagramIcon from '../../../images/InstagramIcon.png';
+import FacebookIcon from '../../../images/FacebookIcon.png';
 
 export const Contact: React.FC = () => {
   return (
@@ -79,8 +81,7 @@ export const Contact: React.FC = () => {
                     className={classes.social__item}
                   >
                     <Image
-                      loader={loader}
-                      src="/images/EmailIcon.png"
+                      src={EmailIcon}
                       width="100px"
                       height="100px"
                       alt=""
@@ -97,10 +98,9 @@ export const Contact: React.FC = () => {
                     className={classes.social__item}
                   >
                     <Image
-                      loader={loader}
                       width="100px"
                       height="100px"
-                      src="/images/InstagramIcon.png"
+                      src={InstagramIcon}
                       alt="Instagram logo"
                       className={classes.image}
                     />
@@ -113,10 +113,9 @@ export const Contact: React.FC = () => {
                     className={classes.social__item}
                   >
                     <Image
-                      loader={loader}
                       width="90px"
                       height="90px"
-                      src="/images/FacebookIcon.png"
+                      src={FacebookIcon}
                       alt="Facebook logo"
                       className={classes.image}
                     />
