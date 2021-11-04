@@ -2,6 +2,7 @@ import React, { useEffect } from 'react';
 import '../src/styles/index.scss';
 import 'animate.css';
 import type { AppProps } from 'next/app';
+import Head from 'next/head';
 
 function MyApp({ Component, pageProps }: AppProps) {
   useEffect(() => {
@@ -23,6 +24,13 @@ function MyApp({ Component, pageProps }: AppProps) {
   });
   return (
     <div className="app">
+      <Head>
+        <meta charSet="utf-8" />
+        <title>Paradise events planner</title>
+        <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+        <meta name="theme-color" content="#b392ac" />
+        <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
+      </Head>
       <Component {...pageProps} />
     </div>
   );
