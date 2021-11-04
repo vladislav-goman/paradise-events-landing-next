@@ -85,8 +85,8 @@ export const Contact: React.FC = () => {
               >
                 <Image
                   src={EmailIcon}
-                  width="100px"
-                  height="100px"
+                  width="80px"
+                  height="80px"
                   alt=""
                   className={classes.image}
                 />
@@ -101,8 +101,8 @@ export const Contact: React.FC = () => {
                 className={classes.social__item}
               >
                 <Image
-                  width="100px"
-                  height="100px"
+                  width="80px"
+                  height="80px"
                   src={InstagramIcon}
                   alt="Instagram logo"
                   className={classes.image}
@@ -116,8 +116,8 @@ export const Contact: React.FC = () => {
                 className={classes.social__item}
               >
                 <Image
-                  width="90px"
-                  height="90px"
+                  width="80px"
+                  height="80px"
                   src={FacebookIcon}
                   alt="Facebook logo"
                   className={classes.image}

@@ -66,10 +66,17 @@
       border-right: none;
       border-bottom: 1px solid $white;
       justify-content: space-between;
+      flex-direction: row-reverse;
       text-align: right;
+      font-size: 16px;
+      padding: 2rem 1rem;
     }
     span {
       margin-left: 1rem;
+
+      @include use-mobile() {
+        margin-left: 0;
+      }
     }
 
     &:last-of-type {
@@ -81,7 +88,10 @@
   .includes {
     display: flex;
     flex-wrap: wrap;
-    flex-direction: column;
+
+    @include use-mobile() {
+      flex-direction: column;
+    }
   }
 
   .includesItem {
@@ -95,6 +105,13 @@
     @include use-mobile() {
       border-right: none;
       justify-content: space-between;
+      flex-direction: row-reverse;
+      border-bottom: 1px solid $primary-color;
+      padding: 1rem 0;
+
+      &:last-of-type {
+        border-bottom: none;
+      }
     }
 
     &.noBR {
@@ -121,10 +138,17 @@
 
     @include use-mobile() {
       font-size: 16px;
+      padding-left: 0;
     }
 
     &.noPL {
       padding-left: 0;
+    }
+  }
+
+  .noMobile {
+    @include use-mobile() {
+      display: none;
     }
   }
 }

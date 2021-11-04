@@ -3,12 +3,14 @@ import React from 'react';
 import Image from 'next/image';
 import classes from './Packages.module.scss';
 import cx from 'classnames';
+import { Autoplay } from 'swiper';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
+import 'swiper/css/autoplay';
 import SeaPicnic from '../../../images/picnic-under-sea.png';
 import ZooPicnic from '../../../images/picnic-zoo.png';
-import Romantic from '../../../images/picnic-zoo.png';
-import Boho from '../../../images/picnic-zoo.png';
+import Romantic from '../../../images/picnic-romantic.png';
+import Boho from '../../../images/picnic-boho.png';
 import Selfie from '../../../images/selfie.png';
 import DJ from '../../../images/control-knobs.png';
 import Cupcake from '../../../images/cupcake.png';
@@ -30,7 +32,12 @@ export const Packages: React.FC = () => {
             </h2>
           </div>
           <div data-animate="animate__fadeIn" className="col-md-12">
-            <Swiper spaceBetween={70} slidesPerView="auto">
+            <Swiper
+              autoplay={{ delay: 3000 }}
+              spaceBetween={70}
+              slidesPerView="auto"
+              modules={[Autoplay]}
+            >
               <SwiperSlide className={classes.slide}>
                 <Image
                   src={ZooPicnic}
@@ -99,12 +106,14 @@ export const Packages: React.FC = () => {
                   className={classes.image}
                 />
                 <span className={classes.includesLabel}>
-                  2 big cheese platters (each with variety of 4 cheeses,
-                  berries,
+                  2 big cheese platters{' '}
+                  <span className={classes.noMobile}>
+                    (each with variety of 4 cheeses, berries,
+                  </span>
                 </span>
               </h4>
               <div className={classes.divider}></div>
-              <h4 className={classes.includesItem}>
+              <h4 className={cx(classes.includesItem, classes.noMobile)}>
                 <span className={cx(classes.includesLabel, classes.noPL)}>
                   grapes, crackers, olives, dip, salami)
                 </span>

@@ -5,10 +5,14 @@ import AnchorLink from 'react-anchor-link-smooth-scroll';
 import cx from 'classnames';
 import classes from './Header.module.scss';
 import PhoneIcon from '../../../images/telephone-icon.png';
+import { HamburgerMenu } from '../../common/HamburgerMenu';
 import Logo from '../../../images/logo.svg';
 
 export const Header: React.FC = () => {
   const [isActive, setIsActive] = useState(false);
+  const [showMobileMenu, setShowMobileMenu] = useState(false);
+  const onClickHandler = () => setShowMobileMenu((showMenu) => !showMenu);
+  const onLinkClickHandler = () => setShowMobileMenu(false);
 
   const tweakHeader = useCallback(() => {
     if (window.scrollY > 0 && !isActive) {
@@ -93,6 +97,72 @@ export const Header: React.FC = () => {
                   FAQ
                 </AnchorLink>
               </nav>
+
+              <nav
+                className={cx(classes.mobileMenu, {
+                  [classes.visible]: showMobileMenu,
+                })}
+              >
+                <div className={classes.mobileNav}>
+                  <AnchorLink
+                    offset="94"
+                    href="#about"
+                    className={classes.link}
+                    onClick={onLinkClickHandler}
+                  >
+                    About us
+                  </AnchorLink>
+                  <AnchorLink
+                    offset="94"
+                    href="#packages"
+                    className={classes.link}
+                    onClick={onLinkClickHandler}
+                  >
+                    Picnic packages
+                  </AnchorLink>
+                  <AnchorLink
+                    offset="94"
+                    href="#gallery"
+                    className={classes.link}
+                    onClick={onLinkClickHandler}
+                  >
+                    Gallery
+                  </AnchorLink>
+                  <AnchorLink
+                    offset="94"
+                    href="#contact"
+                    className={classes.link}
+                    onClick={onLinkClickHandler}
+                  >
+                    Contact us
+                  </AnchorLink>
+                  <AnchorLink
+                    offset="94"
+                    href="#faq"
+                    className={classes.link}
+                    onClick={onLinkClickHandler}
+                  >
+                    FAQ
+                  </AnchorLink>
+                </div>
+                <Link href="tel:+18184046994">
+                  <a className={classes.phoneMobile}>
+                    <Image
+                      src={PhoneIcon}
+                      width="20"
+                      height="20"
+                      alt="Telephone icon"
+                    />
+                    <span className={classes.phone__number}>+18184046994</span>
+                  </a>
+                </Link>
+              </nav>
+
+              <HamburgerMenu
+                onClick={onClickHandler}
+                isOpen={showMobileMenu}
+                className={classes.hamburger}
+              />
             </div>
           </div>
         </div>
