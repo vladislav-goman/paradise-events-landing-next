@@ -21,7 +21,11 @@ function MyApp({ Component, pageProps }: AppProps) {
       .querySelectorAll('[data-animate]')
       .forEach((element) => observer.observe(element));
   });
-  return <Component {...pageProps} />;
+  return (
+    <div className="app">
+      <Component {...pageProps} />
+    </div>
+  );
 }
 
 export default MyApp;

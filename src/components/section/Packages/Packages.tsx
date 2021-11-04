@@ -2,12 +2,22 @@
 import React from 'react';
 import Image from 'next/image';
 import classes from './Packages.module.scss';
+import cx from 'classnames';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import SeaPicnic from '../../../images/picnic-under-sea.png';
 import ZooPicnic from '../../../images/picnic-zoo.png';
 import Romantic from '../../../images/picnic-zoo.png';
 import Boho from '../../../images/picnic-zoo.png';
+import Selfie from '../../../images/selfie.png';
+import DJ from '../../../images/control-knobs.png';
+import Cupcake from '../../../images/cupcake.png';
+import Plate from '../../../images/fork-and-knife-with-plate.png';
+import Bouquet from '../../../images/bouquet.png';
+import Broom from '../../../images/broom.png';
+import Cheese from '../../../images/cheese.png';
+import Peach from '../../../images/peach.png';
+import TropicalDrink from '../../../images/tropical-drink.png';
 
 export const Packages: React.FC = () => {
   return (
@@ -51,6 +61,125 @@ export const Packages: React.FC = () => {
               </SwiperSlide>
             </Swiper>
           </div>
+          <div className="col-md-12">
+            <h3 data-animate="animate__fadeIn" className={classes.subHeader}>
+              Picnic set up includes:
+            </h3>
+          </div>
+          <div className="col-md-12">
+            <div data-animate="animate__fadeIn" className={classes.includes}>
+              <h4 className={classes.includesItem}>
+                <Image
+                  src={Plate}
+                  alt="Plate Emoji"
+                  width="32"
+                  height="32"
+                  className={classes.image}
+                />
+                <span className={classes.includesLabel}>tables set up</span>
+              </h4>
+              <h4 className={classes.includesItem}>
+                <Image
+                  src={Bouquet}
+                  alt="Bouquet Emoji"
+                  width="32"
+                  height="32"
+                  className={classes.image}
+                />
+                <span className={classes.includesLabel}>
+                  flower arrangement
+                </span>
+              </h4>
+              <h4 className={cx(classes.includesItem, classes.noBR)}>
+                <Image
+                  src={Cheese}
+                  alt="Cheese Emoji"
+                  width="32"
+                  height="32"
+                  className={classes.image}
+                />
+                <span className={classes.includesLabel}>
+                  2 big cheese platters (each with variety of 4 cheeses,
+                  berries,
+                </span>
+              </h4>
+              <div className={classes.divider}></div>
+              <h4 className={classes.includesItem}>
+                <span className={cx(classes.includesLabel, classes.noPL)}>
+                  grapes, crackers, olives, dip, salami)
+                </span>
+              </h4>
+              <h4 className={classes.includesItem}>
+                <Image
+                  src={TropicalDrink}
+                  alt="TropicalDrink Emoji"
+                  width="32"
+                  height="32"
+                  className={classes.image}
+                />
+                <span className={classes.includesLabel}>
+                  2 types of juice (1 gallon each)
+                </span>
+              </h4>
+              <h4 className={classes.includesItem}>
+                <Image
+                  src={Peach}
+                  alt="Peach Emoji"
+                  width="32"
+                  height="32"
+                  className={classes.image}
+                />
+                <span className={classes.includesLabel}>1 fruit platter</span>
+              </h4>
+              <h4 className={cx(classes.includesItem, classes.noBR)}>
+                <Image
+                  src={Broom}
+                  alt="Broom Emoji"
+                  width="32"
+                  height="32"
+                  className={classes.image}
+                />
+                <span className={classes.includesLabel}>clean up</span>
+              </h4>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div>
+        <h3 data-animate="animate__fadeIn" className={classes.subHeader}>
+          Extra
+        </h3>
+        <div className={classes.extra}>
+          <h4 data-animate="animate__fadeIn" className={classes.extraItem}>
+            <Image
+              src={Cupcake}
+              alt="Cupcake Emoji"
+              width="32"
+              height="32"
+              className={classes.image}
+            />
+            <span>sweet table and decor for it</span>
+          </h4>
+          <h4 className={classes.extraItem}>
+            <Image
+              src={Selfie}
+              alt="Selfie Emoji"
+              width="32"
+              height="32"
+              className={classes.image}
+            />
+            <span>photo zone set up</span>
+          </h4>
+          <h4 className={classes.extraItem}>
+            <Image
+              src={DJ}
+              alt="Control knobs Emoji"
+              width="32"
+              height="32"
+              className={classes.image}
+            />
+            <span>DJ for you party</span>
+          </h4>
         </div>
       </div>
     </section>

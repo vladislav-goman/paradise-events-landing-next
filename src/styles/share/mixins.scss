@@ -1,5 +1,0 @@
-@mixin use-mobile() {
-  @media screen and (max-width: $breakpoint) {
-    @content;
-  }
-}

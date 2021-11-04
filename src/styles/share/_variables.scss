@@ -18,3 +18,9 @@ $breakpoint: 1025px;
 
 $primary-color: $bouquet;
 $secondary-color: $salt-box;
+
+@mixin use-mobile() {
+  @media screen and (max-width: $breakpoint) {
+    @content;
+  }
+}

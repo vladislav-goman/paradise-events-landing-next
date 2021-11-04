@@ -4,6 +4,10 @@
   padding: 157px 0 90px;
   position: relative;
 
+  @include use-mobile() {
+    padding: 100px 0 60px;
+  }
+
   .inner {
     padding: 96px 0;
     display: flex;
@@ -25,6 +29,10 @@
       display: flex;
       align-items: center;
       justify-content: flex-end;
+
+      @include use-mobile() {
+        width: 100%;
+      }
     }
   }
 
@@ -55,6 +63,10 @@
     transform: rotate(-3.57deg);
     transition: $mid-transition;
 
+    @include use-mobile() {
+      width: 204px;
+    }
+
     .label {
       position: absolute;
       text-decoration: none;
@@ -65,6 +77,10 @@
       left: 50%;
       transform: translateX(-50%) translateY(-50%) rotate(3.57deg);
       transition: $mid-transition;
+
+      @include use-mobile() {
+        font-size: 16px;
+      }
     }
 
     &:hover {
@@ -85,6 +101,12 @@
     justify-content: center;
     flex-direction: column;
     height: 100%;
+
+    @include use-mobile() {
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-around;
+    }
   }
 
   .social {
@@ -95,6 +117,10 @@
     width: 41px;
     height: 41px;
     position: relative;
+
+    @include use-mobile() {
+      margin-bottom: 0;
+    }
 
     &:last-of-type {
       margin-bottom: 0;
