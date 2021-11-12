@@ -9,7 +9,7 @@
   }
 
   .inner {
-    padding: 96px 0;
+    padding: 45px 0;
     display: flex;
     align-items: center;
     flex-direction: column;
@@ -29,7 +29,6 @@
       height: 100%;
       width: 38.5%;
       overflow: hidden;
-      background-color: $rose-white;
       display: flex;
       align-items: center;
       justify-content: flex-end;
@@ -43,7 +42,12 @@
   .header {
     text-align: left;
     max-width: 507px;
+    line-height: 87px;
     margin-bottom: 57px;
+
+    @include use-mobile() {
+      line-height: initial;
+    }
   }
 
   .image {

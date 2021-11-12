@@ -6,8 +6,12 @@
   }
 
   .paragraph {
-    color: $black;
-    line-height: 32px;
+    color: rgba(0, 0, 0, 0.8);
+    font-family: $header-font-family;
+    text-align: justify;
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 38px;
     width: 100%;
     display: block;
 
@@ -17,11 +21,11 @@
   }
 
   .highlight {
+    color: $black;
     font-family: $header-font-family;
     font-size: 32px;
+    line-height: 38px;
     font-weight: 600;
-    color: $primary-color;
-    font-style: italic;
 
     @include use-mobile() {
       font-size: 26px;

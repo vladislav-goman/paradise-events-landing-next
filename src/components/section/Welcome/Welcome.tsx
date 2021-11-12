@@ -1,6 +1,7 @@
 import React from 'react';
 import Image from 'next/image';
 import cx from 'classnames';
+import AnchorLink from 'react-anchor-link-smooth-scroll';
 import classes from './Welcome.module.scss';
 import backgroundImage from '../../../images/welcome-background.png';
 import welcomeImage from '../../../images/welcome-image.png';
@@ -35,9 +36,9 @@ export const Welcome: React.FC = () => {
                   alt="Sparkling Heart Emoji"
                 />
               </h2>
-              <a href="" className={classes.link}>
-                <div className={classes.label}>Learn more</div>
-              </a>
+              <AnchorLink offset="94" href="#contact" className={classes.link}>
+                <div className={classes.label}>Book now</div>
+              </AnchorLink>
             </div>
           </div>
           <div className="col-md-5">

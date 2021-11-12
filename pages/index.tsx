@@ -5,6 +5,7 @@ import { About } from '../src/components/section/About';
 import { Packages } from '../src/components/section/Packages';
 import { Contact } from '../src/components/section/Contact';
 import { FAQ } from '../src/components/section/FAQ';
+import { Footer } from '../src/components/layout/Footer';
 
 const Home: NextPage = () => {
   return (
@@ -17,6 +18,7 @@ const Home: NextPage = () => {
         <Contact />
         <FAQ />
       </main>
+      <Footer />
     </>
   );
 };
