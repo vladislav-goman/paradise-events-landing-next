@@ -14,13 +14,20 @@ $background-color: $rose-white;
 $font-color: $bouquet;
 
 $mid-transition: 0.3s all;
-$breakpoint: 1025px;
+$breakpoint: 992px;
+$breakpoint-tablet: 1200px;
 
 $primary-color: $bouquet;
 $secondary-color: $salt-box;
 
 @mixin use-mobile() {
   @media screen and (max-width: $breakpoint) {
+    @content;
+  }
+}
+
+@mixin use-tablet() {
+  @media screen and (max-width: $breakpoint-tablet) and (min-width: $breakpoint) {
     @content;
   }
 }

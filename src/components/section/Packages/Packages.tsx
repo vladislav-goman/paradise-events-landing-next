@@ -31,125 +31,80 @@ export const Packages: React.FC = () => {
               Picnic packages
             </h2>
           </div>
-          <div data-animate="animate__fadeIn" className="col-md-12">
-            <Swiper
-              autoplay={{ delay: 3000 }}
-              spaceBetween={70}
-              slidesPerView="auto"
-              modules={[Autoplay]}
-            >
-              <SwiperSlide className={classes.slide}>
-                <Image
-                  src={ZooPicnic}
-                  alt="Zoo Picnic"
-                  className={classes.image}
-                />
+          <div className="col-md-12">
+            <div className={classes.row}>
+              <div className={classes.card}>
+                <Swiper
+                  autoplay={{ delay: 3000 }}
+                  spaceBetween={70}
+                  slidesPerView={1}
+                  modules={[Autoplay]}
+                >
+                  <SwiperSlide>
+                    <Image
+                      src={ZooPicnic}
+                      alt="Zoo Picnic"
+                      className={classes.image}
+                    />
+                  </SwiperSlide>
+                </Swiper>
                 <h3 className={classes.picnicHeader}>Zoo Picnic</h3>
-              </SwiperSlide>
-              <SwiperSlide className={classes.slide}>
-                <Image
-                  src={SeaPicnic}
-                  alt="Under The Sea"
-                  className={classes.image}
-                />
+              </div>
+              <div className={classes.card}>
+                <Swiper
+                  autoplay={{ delay: 4000 }}
+                  spaceBetween={70}
+                  slidesPerView={1}
+                  modules={[Autoplay]}
+                >
+                  <SwiperSlide className={classes.slide}>
+                    <Image
+                      src={SeaPicnic}
+                      alt="Under The Sea"
+                      className={classes.image}
+                    />
+                  </SwiperSlide>
+                </Swiper>
                 <h3 className={classes.picnicHeader}>Under The Sea</h3>
-              </SwiperSlide>
-              <SwiperSlide className={classes.slide}>
-                <Image
-                  src={Romantic}
-                  alt="Romantic Getaway"
-                  className={classes.image}
-                />
+              </div>
+            </div>
+          </div>
+          <div className="col-md-12">
+            <div className={classes.row}>
+              <div className={classes.card}>
+                <Swiper
+                  autoplay={{ delay: 5000 }}
+                  spaceBetween={70}
+                  slidesPerView={1}
+                  modules={[Autoplay]}
+                >
+                  <SwiperSlide className={classes.slide}>
+                    <Image
+                      src={Romantic}
+                      alt="Romantic Getaway"
+                      className={classes.image}
+                    />
+                  </SwiperSlide>
+                </Swiper>
                 <h3 className={classes.picnicHeader}>Romantic Getaway</h3>
-              </SwiperSlide>
-              <SwiperSlide className={classes.slide}>
-                <Image src={Boho} alt="Boho Picnic" className={classes.image} />
+              </div>
+              <div className={classes.card}>
+                <Swiper
+                  autoplay={{ delay: 6000 }}
+                  spaceBetween={70}
+                  slidesPerView={1}
+                  modules={[Autoplay]}
+                >
+                  <SwiperSlide className={classes.slide}>
+                    <Image
+                      src={Boho}
+                      alt="Boho Picnic"
+                      className={classes.image}
+                    />
+                  </SwiperSlide>
+                </Swiper>
                 <h3 className={classes.picnicHeader}>Boho Picnic</h3>
-              </SwiperSlide>
-            </Swiper>
-          </div>
-          <div className="col-md-12">
-            <h3 data-animate="animate__fadeIn" className={classes.subHeader}>
-              Picnic set up includes:
-            </h3>
-          </div>
-          <div className="col-md-12">
-            <div data-animate="animate__fadeIn" className={classes.includes}>
-              <h4 className={classes.includesItem}>
-                <Image
-                  src={Plate}
-                  alt="Plate Emoji"
-                  width="32"
-                  height="32"
-                  className={classes.image}
-                />
-                <span className={classes.includesLabel}>tables set up</span>
-              </h4>
-              <h4 className={classes.includesItem}>
-                <Image
-                  src={Bouquet}
-                  alt="Bouquet Emoji"
-                  width="32"
-                  height="32"
-                  className={classes.image}
-                />
-                <span className={classes.includesLabel}>
-                  flower arrangement
-                </span>
-              </h4>
-              <h4 className={cx(classes.includesItem, classes.noBR)}>
-                <Image
-                  src={Cheese}
-                  alt="Cheese Emoji"
-                  width="32"
-                  height="32"
-                  className={classes.image}
-                />
-                <span className={classes.includesLabel}>
-                  2 big cheese platters{' '}
-                  <span className={classes.noMobile}>
-                    (each with variety of 4 cheeses, berries,
-                  </span>
-                </span>
-              </h4>
-              <div className={classes.divider}></div>
-              <h4 className={cx(classes.includesItem, classes.noMobile)}>
-                <span className={cx(classes.includesLabel, classes.noPL)}>
-                  grapes, crackers, olives, dip, salami)
-                </span>
-              </h4>
-              <h4 className={classes.includesItem}>
-                <Image
-                  src={TropicalDrink}
-                  alt="TropicalDrink Emoji"
-                  width="32"
-                  height="32"
-                  className={classes.image}
-                />
-                <span className={classes.includesLabel}>
-                  2 types of juice (1 gallon each)
-                </span>
-              </h4>
-              <h4 className={classes.includesItem}>
-                <Image
-                  src={Peach}
-                  alt="Peach Emoji"
-                  width="32"
-                  height="32"
-                  className={classes.image}
-                />
-                <span className={classes.includesLabel}>1 fruit platter</span>
-              </h4>
-              <h4 className={cx(classes.includesItem, classes.noBR)}>
-                <Image
-                  src={Broom}
-                  alt="Broom Emoji"
-                  width="32"
-                  height="32"
-                  className={classes.image}
-                />
-                <span className={classes.includesLabel}>clean up</span>
-              </h4>
+              </div>
             </div>
           </div>
         </div>

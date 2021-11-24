@@ -6,8 +6,28 @@
   }
 
   .slide {
-    max-width: 420px;
     width: 100%;
+  }
+
+  .row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    @include use-mobile() {
+      flex-direction: column;
+      justify-content: center;
+    }
+  }
+
+  .card {
+    margin-bottom: 70px;
+    max-width: 47.5%;
+
+    @include use-mobile() {
+      margin-bottom: 35px;
+      max-width: 100%;
+    }
   }
 
   .picnicHeader {
@@ -27,6 +47,7 @@
 
   .image {
     width: 100%;
+    object-fit: cover;
   }
 
   .subHeader {

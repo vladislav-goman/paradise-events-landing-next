@@ -15,9 +15,9 @@ export const Header: React.FC = () => {
   const onLinkClickHandler = () => setShowMobileMenu(false);
 
   const tweakHeader = useCallback(() => {
-    if (window.scrollY > 0 && !isActive) {
+    if (window.scrollY >= 20 && !isActive) {
       setIsActive(true);
-    } else if (window.scrollY === 0 && isActive) {
+    } else if (window.scrollY < 20 && isActive) {
       setIsActive(false);
     }
   }, [isActive]);
