@@ -5,6 +5,14 @@
     margin: 65px 0;
   }
 
+  .text {
+    padding-left: 70px;
+
+    @include use-mobile() {
+      padding-left: 0;
+    }
+  }
+
   .paragraph {
     color: rgba(0, 0, 0, 0.8);
     text-align: justify;
@@ -14,10 +22,6 @@
     line-height: 38px;
     width: 100%;
     display: block;
-
-    @include use-mobile() {
-      text-align: center;
-    }
   }
 
   .emoji {
@@ -27,10 +31,8 @@
   .container {
     position: relative;
     height: 100%;
-    margin-right: 70px;
 
     @include use-mobile() {
-      margin-right: 0;
       height: unset;
       margin-bottom: 2rem;
     }

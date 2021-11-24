@@ -8,9 +8,12 @@ function MyApp({ Component, pageProps }: AppProps) {
   useEffect(() => {
     const observer = new IntersectionObserver((entries) => {
       entries.forEach((entry) => {
-        if (entry.isIntersecting) {
+        const animationClass = entry.target.getAttribute('data-animate')!;
+        if (
+          entry.isIntersecting &&
+          !entry.target.classList.contains(animationClass)
+        ) {
           const animationClass = entry.target.getAttribute('data-animate');
-          console.log(animationClass);
           entry.target.classList.add(`animate__animated`);
           entry.target.classList.add(`${animationClass}`);
           return;
