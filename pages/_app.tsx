@@ -7,7 +7,7 @@ import Head from 'next/head';
 const options = {
   root: null, // relative to document viewport
   rootMargin: '0px', // margin around root. Values are similar to css property. Unitless values not allowed
-  threshold: 1.0, // visible amount of item shown in relation to root
+  threshold: 0, // visible amount of item shown in relation to root
 };
 
 function MyApp({ Component, pageProps }: AppProps) {
