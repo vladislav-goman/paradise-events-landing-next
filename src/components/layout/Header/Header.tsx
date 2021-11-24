@@ -45,6 +45,7 @@ export const Header: React.FC = () => {
               <div className={classes.logo__container}>
                 <Image
                   src={Logo}
+                  quality={100}
                   width="58px"
                   height="58px"
                   alt="Paradise Events Planner Logo"

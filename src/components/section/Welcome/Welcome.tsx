@@ -8,7 +8,6 @@ import welcomeImage from '../../../images/welcome-image.png';
 import EmailIcon from '../../../images/EmailIcon.png';
 import InstagramIcon from '../../../images/InstagramIcon.png';
 import FacebookIcon from '../../../images/FacebookIcon.png';
-import HeartIcon from '../../../images/sparkling-heart.png';
 
 export const Welcome: React.FC = () => {
   return (
@@ -28,13 +27,7 @@ export const Welcome: React.FC = () => {
           <div className="col-md-6">
             <div className={classes.inner}>
               <h2 className={classes.header}>
-                Brighten up your event with Paradise Events Planner{' '}
-                <Image
-                  src={HeartIcon}
-                  width="39"
-                  height="39"
-                  alt="Sparkling Heart Emoji"
-                />
+                Brighten up your event with Paradise Events Planner
               </h2>
               <AnchorLink offset="94" href="#contact" className={classes.link}>
                 <div className={classes.label}>Book now</div>
@@ -45,6 +38,8 @@ export const Welcome: React.FC = () => {
             <div className={classes.image__container}>
               <Image
                 src={welcomeImage}
+                placeholder="blur"
+                quality={100}
                 layout="fill"
                 alt="Picture of a nicely served outdoors dining table"
                 className={classes.image}

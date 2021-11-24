@@ -29,6 +29,7 @@
   .label {
     font-family: $grand-royal-font-family;
     font-size: 36px;
+    color: $secondary-color;
 
     @include use-tablet() {
       font-size: 28px;
@@ -58,7 +59,7 @@
     font-weight: 300;
     padding-top: 6px;
     font-size: 18px;
-    color: $secondary-color;
+    color: $primary-color;
 
     @include use-tablet() {
       font-size: 14px;
@@ -90,7 +91,7 @@
   }
 
   .phone {
-    color: $secondary-color;
+    color: $primary-color;
     font-weight: 600;
     font-size: 24px;
     text-decoration: none;
@@ -107,7 +108,7 @@
     }
 
     &:hover {
-      color: $primary-color;
+      color: $secondary-color;
     }
 
     &__number {
@@ -116,7 +117,7 @@
   }
 
   .phoneMobile {
-    color: $secondary-color;
+    color: $primary-color;
     font-weight: 600;
     font-size: 24px;
     text-decoration: none;
@@ -131,7 +132,7 @@
     padding-bottom: 2rem;
 
     &:hover {
-      color: $primary-color;
+      color: $secondary-color;
     }
 
     &__number {
@@ -150,7 +151,7 @@
 
   .link {
     text-decoration: none;
-    color: $secondary-color;
+    color: $primary-color;
     font-weight: 500;
     font-size: 18px;
     transition: $mid-transition;
@@ -172,7 +173,7 @@
     }
 
     &:hover {
-      color: $primary-color;
+      color: $secondary-color;
     }
   }
 

@@ -3,9 +3,10 @@ $white: #ffffff;
 $bouquet: #b392ac;
 $salt-box: #735d78;
 $rose-white: #fffafa;
+$mercury: #e5e5e5;
 
 $font-size: 1rem;
-$font-family: 'Inter', sans-serif;
+$font-family: 'HelveticaNeueCyr', sans-serif;
 $header-font-family: 'Cormorant', serif;
 $grand-royal-font-family: 'Grand Royal', serif;
 $montserrat-font-family: 'Montserrat', serif;
@@ -17,8 +18,8 @@ $mid-transition: 0.3s all;
 $breakpoint: 992px;
 $breakpoint-tablet: 1200px;
 
-$primary-color: $bouquet;
-$secondary-color: $salt-box;
+$primary-color: $salt-box;
+$secondary-color: $bouquet;
 
 @mixin use-mobile() {
   @media screen and (max-width: $breakpoint) {

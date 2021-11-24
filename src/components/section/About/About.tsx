@@ -25,6 +25,8 @@ export const About: React.FC = () => {
                   className={classes.pic}
                   src={BackgroundImage}
                   alt="Stars Emoji"
+                  placeholder="blur"
+                  quality={100}
                 />
               </div>
               <div data-animate="animate__fadeInLeft" className={classes.image}>
@@ -32,6 +34,8 @@ export const About: React.FC = () => {
                   className={classes.pic}
                   src={FrontImage}
                   alt="Stars Emoji"
+                  placeholder="blur"
+                  quality={100}
                 />
               </div>
             </div>
@@ -70,14 +74,7 @@ export const About: React.FC = () => {
               important, <span className={classes.highlight}>having fun</span>!
             </p>
             <p className={classes.paragraph}>
-              Marta and Kristina, with love from Paradise Events Planner{' '}
-              <Image
-                className={classes.emoji}
-                src={HeartIcon}
-                width="24"
-                height="24"
-                alt="Heart Emoji"
-              />
+              Marta and Kristina, with love from Paradise Events Planner.
             </p>
           </div>
         </div>

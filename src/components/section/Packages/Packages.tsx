@@ -45,6 +45,8 @@ export const Packages: React.FC = () => {
                       src={ZooPicnic}
                       alt="Zoo Picnic"
                       className={classes.image}
+                      placeholder="blur"
+                      quality={100}
                     />
                   </SwiperSlide>
                 </Swiper>
@@ -62,6 +64,8 @@ export const Packages: React.FC = () => {
                       src={SeaPicnic}
                       alt="Under The Sea"
                       className={classes.image}
+                      placeholder="blur"
+                      quality={100}
                     />
                   </SwiperSlide>
                 </Swiper>
@@ -83,6 +87,8 @@ export const Packages: React.FC = () => {
                       src={Romantic}
                       alt="Romantic Getaway"
                       className={classes.image}
+                      placeholder="blur"
+                      quality={100}
                     />
                   </SwiperSlide>
                 </Swiper>
@@ -100,6 +106,8 @@ export const Packages: React.FC = () => {
                       src={Boho}
                       alt="Boho Picnic"
                       className={classes.image}
+                      placeholder="blur"
+                      quality={100}
                     />
                   </SwiperSlide>
                 </Swiper>
