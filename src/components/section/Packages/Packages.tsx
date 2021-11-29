@@ -193,7 +193,12 @@ export const Packages: React.FC = () => {
               </li>
               <li className={classes.addon_item}>Photographer</li>
             </ul>
-            <a href="#contact" className={classes.link}>
+            <a
+              href="https://www.instagram.com/paradiseeventsplanner/"
+              target="_blank"
+              className={classes.link}
+              rel="noreferrer"
+            >
               <div className={classes.label}>DM for more details</div>
             </a>
           </div>
