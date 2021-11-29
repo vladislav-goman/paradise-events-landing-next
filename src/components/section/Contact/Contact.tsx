@@ -57,16 +57,6 @@ export const Contact: React.FC = () => {
                 />
               </div>
               <div className={classes.input_group}>
-                <label htmlFor="message" className={classes.label}>
-                  Message
-                </label>
-                <textarea
-                  id="message"
-                  name="message"
-                  className={classes.input}
-                ></textarea>
-              </div>
-              <div className={classes.input_group}>
                 <button className={classes.submit} type="submit">
                   Submit
                 </button>
@@ -77,6 +67,7 @@ export const Contact: React.FC = () => {
           <div className="col-md-5">
             <nav data-animate="animate__fadeInRight" className={classes.social}>
               <h3 className={classes.description}>
+                <br />
                 Reach Us Out In Social Media
               </h3>
               <a

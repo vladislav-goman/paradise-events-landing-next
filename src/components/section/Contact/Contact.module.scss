@@ -1,7 +1,7 @@
 @import '../../../styles/share/variables';
 
 .contact {
-  margin: 65px 0;
+  padding: 65px 0 0;
 
   .header {
     padding-bottom: 33px;
@@ -18,6 +18,7 @@
     line-height: 29px;
     margin: 32px 0 41px;
     max-width: 540px;
+    color: $secondary-color;
 
     @include use-mobile() {
       font-size: 16px;
@@ -41,13 +42,13 @@
       text-decoration: none;
       display: flex;
       align-items: center;
-      margin-bottom: 50px;
-      padding-bottom: 50px;
+      margin-top: 24px;
+      padding-bottom: 24px;
       width: 100%;
       border-bottom: 1px solid $bouquet;
 
       @include use-mobile() {
-        margin-bottom: 1rem;
+        margin-top: 1rem;
         padding-bottom: 1rem;
         justify-content: space-between;
         flex-direction: row-reverse;
@@ -55,7 +56,7 @@
 
       &:hover {
         .link {
-          color: $primary-color;
+          color: $secondary-color;
         }
 
         .image {
@@ -130,7 +131,7 @@
     .submit {
       border: 1px solid transparent;
       width: 100%;
-      background-color: $primary-color;
+      background-color: $secondary-color;
       color: $white;
       padding: 19px 0;
       text-align: center;
@@ -139,8 +140,8 @@
 
       &:hover {
         background-color: transparent;
-        border: 1px solid $primary-color;
-        color: $primary-color;
+        border: 1px solid $secondary-color;
+        color: $secondary-color;
       }
     }
   }

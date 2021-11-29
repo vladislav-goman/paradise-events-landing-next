@@ -3,11 +3,12 @@ import '../src/styles/index.scss';
 import 'animate.css';
 import type { AppProps } from 'next/app';
 import Head from 'next/head';
+import { IdProvider } from '@radix-ui/react-id';
 
 const options = {
-  root: null, // relative to document viewport
-  rootMargin: '0px', // margin around root. Values are similar to css property. Unitless values not allowed
-  threshold: 0, // visible amount of item shown in relation to root
+  root: null,
+  rootMargin: '0px',
+  threshold: 0,
 };
 
 function MyApp({ Component, pageProps }: AppProps) {
@@ -27,21 +28,29 @@ function MyApp({ Component, pageProps }: AppProps) {
       });
     }, options);
 
-    document
-      .querySelectorAll('[data-animate]')
-      .forEach((element) => observer.observe(element));
+    Array.from(
+      document.querySelectorAll<HTMLElement>('[data-animate]')
+    ).forEach((element) => {
+      element.style.opacity = '0';
+      observer.observe(element);
+    });
   });
   return (
-    <div className="app">
-      <Head>
-        <meta charSet="utf-8" />
-        <title>Paradise events planner</title>
-        <meta name="viewport" content="initial-scale=1.0, width=device-width" />
-        <meta name="theme-color" content="#b392ac" />
-        <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
-      </Head>
-      <Component {...pageProps} />
-    </div>
+    <IdProvider>
+      <div className="app">
+        <Head>
+          <meta charSet="utf-8" />
+          <title>Paradise events planner</title>
+          <meta
+            name="viewport"
+            content="initial-scale=1.0, width=device-width"
+          />
+          <meta name="theme-color" content="#b392ac" />
+          <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
+        </Head>
+        <Component {...pageProps} />
+      </div>
+    </IdProvider>
   );
 }
 

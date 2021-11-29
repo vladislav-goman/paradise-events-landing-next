@@ -131,6 +131,10 @@
     width: 100%;
     padding-bottom: 2rem;
 
+    @include use-mobile() {
+      margin-bottom: 4rem;
+    }
+
     &:hover {
       color: $secondary-color;
     }
@@ -192,7 +196,7 @@
     top: 0;
     left: 0;
     width: 100%;
-    height: 100vh;
+    height: 100%;
     position: fixed;
     background-color: $white;
     z-index: -1;
