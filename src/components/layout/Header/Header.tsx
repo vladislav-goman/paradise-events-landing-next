@@ -1,4 +1,4 @@
-import React, { useEffect, useState, useCallback, EventHandler } from 'react';
+import React, { useEffect, useState, useCallback, useRef } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import AnchorLink from 'react-anchor-link-smooth-scroll';
@@ -6,13 +6,24 @@ import cx from 'classnames';
 import classes from './Header.module.scss';
 import PhoneIcon from '../../../images/telephone-icon.png';
 import { HamburgerMenu } from '../../common/HamburgerMenu';
-import Logo from '../../../images/logo.svg';
 
 export const Header: React.FC = () => {
   const [isActive, setIsActive] = useState(false);
   const [showMobileMenu, setShowMobileMenu] = useState(false);
-  const onClickHandler = () => setShowMobileMenu((showMenu) => !showMenu);
-  const onLinkClickHandler = () => setShowMobileMenu(false);
+  const bodyRef = useRef<HTMLElement>();
+  const onClickHandler = () => {
+    console.log(bodyRef.current);
+    if (bodyRef.current) {
+      bodyRef.current.classList.toggle('menu-visible');
+    }
+    setShowMobileMenu((showMenu) => !showMenu);
+  };
+  const onLinkClickHandler = () => {
+    if (bodyRef.current) {
+      bodyRef.current.classList.remove('menu-visible');
+    }
+    setShowMobileMenu(false);
+  };
 
   const tweakHeader = useCallback(() => {
     if (window.scrollY >= 20 && !isActive) {
@@ -23,6 +34,7 @@ export const Header: React.FC = () => {
   }, [isActive]);
 
   useEffect(() => {
+    bodyRef.current = document.querySelector('body')!;
     tweakHeader();
     document.addEventListener('scroll', tweakHeader);
 
@@ -132,7 +144,7 @@ export const Header: React.FC = () => {
               >
                 <div className={classes.mobileNav}>
                   <AnchorLink
-                    offset="50"
+                    offset="30"
                     href="#about"
                     className={classes.link}
                     onClick={onLinkClickHandler}
@@ -140,23 +152,23 @@ export const Header: React.FC = () => {
                     About us
                   </AnchorLink>
                   <AnchorLink
-                    offset="50"
+                    offset="30"
                     href="#packages"
                     className={classes.link}
                     onClick={onLinkClickHandler}
                   >
                     Picnic packages
                   </AnchorLink>
-                  <AnchorLink
-                    offset="50"
+                  {/* <AnchorLink
+                    offset="30"
                     href="#gallery"
                     className={classes.link}
                     onClick={onLinkClickHandler}
                   >
                     Gallery
-                  </AnchorLink>
+                  </AnchorLink> */}
                   <AnchorLink
-                    offset="50"
+                    offset="30"
                     href="#contact"
                     className={classes.link}
                     onClick={onLinkClickHandler}
@@ -164,7 +176,7 @@ export const Header: React.FC = () => {
                     Contact us
                   </AnchorLink>
                   <AnchorLink
-                    offset="50"
+                    offset="30"
                     href="#faq"
                     className={classes.link}
                     onClick={onLinkClickHandler}

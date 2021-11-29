@@ -29,6 +29,10 @@ body {
       width: unset;
     }
   }
+
+  &.menu-visible {
+    overflow-y: hidden;
+  }
 }
 
 .app {

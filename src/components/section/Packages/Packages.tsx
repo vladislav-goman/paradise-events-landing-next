@@ -11,6 +11,7 @@ import SeaPicnic from '../../../images/picnic-under-sea.png';
 import ZooPicnic from '../../../images/picnic-zoo.png';
 import Romantic from '../../../images/picnic-romantic.png';
 import Boho from '../../../images/picnic-boho.png';
+import AnchorLink from 'react-anchor-link-smooth-scroll';
 import Selfie from '../../../images/selfie.png';
 import DJ from '../../../images/control-knobs.png';
 import Cupcake from '../../../images/cupcake.png';
@@ -117,41 +118,85 @@ export const Packages: React.FC = () => {
           </div>
         </div>
       </div>
-      <div>
-        <h3 data-animate="animate__fadeIn" className={classes.subHeader}>
-          Extra
-        </h3>
-        <div className={classes.extra}>
-          <h4 data-animate="animate__fadeIn" className={classes.extraItem}>
-            <Image
-              src={Cupcake}
-              alt="Cupcake Emoji"
-              width="32"
-              height="32"
-              className={classes.image}
-            />
-            <span>sweet table and decor for it</span>
-          </h4>
-          <h4 className={classes.extraItem}>
-            <Image
-              src={Selfie}
-              alt="Selfie Emoji"
-              width="32"
-              height="32"
-              className={classes.image}
-            />
-            <span>photo zone set up</span>
-          </h4>
-          <h4 className={classes.extraItem}>
-            <Image
-              src={DJ}
-              alt="Control knobs Emoji"
-              width="32"
-              height="32"
-              className={classes.image}
-            />
-            <span>DJ for you party</span>
-          </h4>
+      <div className={classes.services}>
+        <div className="container">
+          <div className="row">
+            <div className="col-md-12">
+              <h3 className={classes.servicesHeader}>
+                Service Description picnic for large groups more than 10 guests
+              </h3>
+            </div>
+            <div className="col-md-6">
+              <ul className={cx(classes.list, classes.paddingLeft)}>
+                <li className={classes.servicesItem}>
+                  <span className={classes.dot}></span>Setup of picnic
+                </li>
+                <li className={classes.servicesItem}>
+                  <span className={classes.dot}></span>Table and tablescape
+                  setup
+                </li>
+                <li className={classes.servicesItem}>
+                  <span className={classes.dot}></span>Rug/s or blankets{' '}
+                </li>
+                <li className={classes.servicesItem}>
+                  <span className={classes.dot}></span>Assortment of pillows or
+                  floor cushions
+                </li>
+                <li className={classes.servicesItem}>
+                  <span className={classes.dot}></span>Plates/Placemats
+                </li>
+                <li className={classes.servicesItem}>
+                  <span className={classes.dot}></span>Plates{' '}
+                </li>
+                <li className={classes.servicesItem}>
+                  <span className={classes.dot}></span>Silverware
+                </li>
+              </ul>
+            </div>
+            <div className="col-md-6">
+              <ul className={cx(classes.list, classes.paddingRight)}>
+                <li className={classes.servicesItem}>
+                  <span className={classes.dot}></span>Flower arrangements{' '}
+                </li>
+                <li className={classes.servicesItem}>
+                  <span className={classes.dot}></span>2 big cheese platters
+                  (variety of 4 cheeses, berries, grapes, crackers, olives, dip,
+                  salami)
+                </li>
+                <li className={classes.servicesItem}>
+                  <span className={classes.dot}></span>Linen Napkins
+                </li>
+                <li className={classes.servicesItem}>
+                  <span className={classes.dot}></span>2 types of juice (1
+                  gallon each)
+                </li>
+                <li className={classes.servicesItem}>
+                  <span className={classes.dot}></span>1 fruit platter{' '}
+                </li>
+                <li className={classes.servicesItem}>
+                  <span className={classes.dot}></span>Clean up
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div className="container">
+        <div className="row">
+          <div className="col-md-12">
+            <h3 className={classes.addonsHeader}>Add-ons</h3>
+            <ul className={classes.addons}>
+              <li className={classes.addon_item}>DJ for you party</li>
+              <li className={classes.addon_item}>Photo zone set up</li>
+              <li className={classes.addon_item}>
+                Sweet table and decor for it
+              </li>
+              <li className={classes.addon_item}>Photographer</li>
+            </ul>
+            <a href="#contact" className={classes.link}>
+              <div className={classes.label}>DM for more details</div>
+            </a>
+          </div>
         </div>
       </div>
     </section>

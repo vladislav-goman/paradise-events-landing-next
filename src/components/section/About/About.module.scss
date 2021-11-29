@@ -22,6 +22,11 @@
     line-height: 38px;
     width: 100%;
     display: block;
+
+    @include use-mobile() {
+      font-size: 18px;
+      line-height: 24px;
+    }
   }
 
   .emoji {

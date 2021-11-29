@@ -172,4 +172,159 @@
       display: none;
     }
   }
+
+  .services {
+    background-color: $secondary-color;
+    color: $white;
+    font-family: $header-font-family;
+    padding: 50px 0;
+
+    @include use-mobile() {
+      padding: 2rem 0;
+    }
+
+    .servicesHeader {
+      font-size: 48px;
+      margin-bottom: 53px;
+
+      @include use-mobile() {
+        font-size: 28px;
+        margin-bottom: 1.5rem;
+      }
+    }
+
+    .list {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: flex-start;
+
+      &.paddingRight {
+        padding-right: 15px;
+
+        @include use-mobile() {
+          padding-right: 0;
+          padding-left: 15px;
+        }
+      }
+
+      &.paddingLeft {
+        padding-left: 15px;
+      }
+    }
+
+    .servicesItem {
+      font-size: 36px;
+      font-weight: 700;
+      line-height: 44px;
+      position: relative;
+      display: grid;
+      grid-template-columns: 2rem 1fr;
+
+      @include use-mobile() {
+        font-size: 18px;
+        line-height: 24px;
+        grid-template-columns: 1rem 1fr;
+      }
+
+      .dot {
+        width: 8px;
+        height: 8px;
+        background-color: $white;
+        border-radius: 50%;
+        margin-top: 16px;
+
+        @include use-mobile() {
+          width: 4px;
+          height: 4px;
+          margin-top: 10px;
+        }
+      }
+    }
+  }
+
+  .link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    border: 1.5px solid $secondary-color;
+    width: 306px;
+    height: 47px;
+    border-radius: 50%;
+    transform: rotate(-3.57deg);
+    transition: $mid-transition;
+    margin: auto;
+
+    @include use-mobile() {
+      max-width: 100%;
+    }
+
+    .label {
+      position: absolute;
+      text-decoration: none;
+      color: $secondary-color;
+      font-weight: 300;
+      font-size: 18px;
+      top: 50%;
+      left: 50%;
+      transform: translateX(-50%) translateY(-50%) rotate(3.57deg);
+      transition: $mid-transition;
+
+      @include use-mobile() {
+        font-size: 16px;
+      }
+    }
+
+    &:hover {
+      color: $white;
+      background-color: $secondary-color;
+      transform: rotate(3.57deg);
+
+      .label {
+        color: $white;
+        transform: translateX(-50%) translateY(-50%) rotate(-3.57deg);
+      }
+    }
+  }
+
+  .addonsHeader {
+    font-size: 48px;
+    margin: 98px 0 50px;
+    color: $secondary-color;
+
+    @include use-mobile() {
+      font-size: 28px;
+      margin: 2rem 0 1rem;
+    }
+  }
+
+  .addons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-bottom: 64px;
+
+    @include use-mobile() {
+      margin-bottom: 2rem;
+    }
+
+    .addon_item {
+      color: $secondary-color;
+      font-family: $header-font-family;
+      font-weight: 700;
+      font-size: 36px;
+      margin-bottom: 31px;
+
+      @include use-mobile() {
+        font-size: 18px;
+        margin-bottom: 1rem;
+      }
+
+      &:last-of-type {
+        margin-bottom: 0;
+      }
+    }
+  }
 }
