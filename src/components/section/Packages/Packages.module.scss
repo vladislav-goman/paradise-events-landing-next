@@ -32,9 +32,7 @@
 
   .picnicHeader {
     width: 100%;
-    border-top: 1px solid $primary-color;
-    padding-top: 13px;
-    margin-top: 37px;
+    margin-top: 17px;
     font-size: 48px;
     text-align: left;
 
@@ -47,6 +45,7 @@
 
   .image {
     width: 100%;
+    background-color: #dcdcdc;
     object-fit: cover;
   }
 
@@ -325,6 +324,24 @@
       &:last-of-type {
         margin-bottom: 0;
       }
+    }
+  }
+
+  .pagination {
+    width: 100%;
+    display: flex;
+    padding-top: 32px;
+  }
+
+  .bullet {
+    height: 3px;
+    width: 100%;
+    display: block;
+    background-color: #e8c2ca;
+    cursor: pointer;
+
+    &.bulletActive {
+      background-color: $primary-color;
     }
   }
 }

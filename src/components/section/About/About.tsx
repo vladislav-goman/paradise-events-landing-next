@@ -2,9 +2,8 @@
 import React from 'react';
 import Image from 'next/image';
 import classes from './About.module.scss';
-import HeartIcon from '../../../images/heart-icon.png';
 import StarsIcon from '../../../images/stars-icon.png';
-import BackgroundImage from '../../../images/about-us-background.png';
+import BackgroundImage from '../../../images/about1.jpg';
 import FrontImage from '../../../images/about-us-image.png';
 
 export const About: React.FC = () => {

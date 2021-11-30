@@ -4,7 +4,7 @@ import cx from 'classnames';
 import AnchorLink from 'react-anchor-link-smooth-scroll';
 import classes from './Welcome.module.scss';
 import backgroundImage from '../../../images/welcome-background.png';
-import welcomeImage from '../../../images/welcome-image.png';
+import welcomeImage from '../../../images/welcome-image.jpg';
 import EmailIcon from '../../../images/EmailIcon.png';
 import InstagramIcon from '../../../images/InstagramIcon.png';
 import FacebookIcon from '../../../images/FacebookIcon.png';
@@ -24,29 +24,27 @@ export const Welcome: React.FC = () => {
       </div>
       <div className="container">
         <div className="row">
-          <div className="col-md-6">
+          <div className="col-lg-6">
             <div className={classes.inner}>
-              <h2 className={classes.header}>
+              <h1 className={classes.header}>
                 Brighten up your event with Paradise Events Planner
-              </h2>
+              </h1>
               <AnchorLink offset="94" href="#contact" className={classes.link}>
                 <div className={classes.label}>Book now</div>
               </AnchorLink>
             </div>
           </div>
-          <div className="col-md-5">
+          <div className="col-lg-5">
             <div className={classes.image__container}>
               <Image
                 src={welcomeImage}
-                placeholder="blur"
-                quality={100}
                 layout="fill"
                 alt="Picture of a nicely served outdoors dining table"
                 className={classes.image}
               />
             </div>
           </div>
-          <div className="col-md-1">
+          <div className="col-lg-1">
             <nav className={classes.nav}>
               <a
                 href="mailto:paradiseeventsplanner@gmail.com"
@@ -63,7 +61,7 @@ export const Welcome: React.FC = () => {
                 <Image src={InstagramIcon} layout="fill" alt="Instagram logo" />
               </a>
               <a
-                href="https://www.facebook.com/Paradiseeventsplanner"
+                href="https://www.facebook.com/Paradiseeventsplanner-102947148835169"
                 target="_blank"
                 className={classes.social}
                 rel="noreferrer"

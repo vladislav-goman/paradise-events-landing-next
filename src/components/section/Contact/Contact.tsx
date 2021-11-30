@@ -101,7 +101,7 @@ export const Contact: React.FC = () => {
                 <h4 className={classes.link}>@paradiseeventsplanner</h4>
               </a>
               <a
-                href="https://www.facebook.com/Paradiseeventsplanner"
+                href="https://www.facebook.com/Paradiseeventsplanner-102947148835169"
                 target="_blank"
                 rel="noreferrer"
                 className={classes.social__item}

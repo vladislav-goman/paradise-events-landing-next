@@ -90,7 +90,7 @@ export const Header: React.FC = () => {
                 </svg>
 
                 <span className={classes.label__group}>
-                  <h1 className={classes.label}>Paradise</h1>
+                  <h3 className={classes.label}>Paradise</h3>
                   <p className={classes.description}>events planner</p>
                 </span>
               </div>
