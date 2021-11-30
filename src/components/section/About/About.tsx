@@ -25,7 +25,7 @@ export const About: React.FC = () => {
                   src={BackgroundImage}
                   alt="Stars Emoji"
                   placeholder="blur"
-                  quality={100}
+                  // quality={25}
                 />
               </div>
               <div data-animate="animate__fadeInLeft" className={classes.image}>
