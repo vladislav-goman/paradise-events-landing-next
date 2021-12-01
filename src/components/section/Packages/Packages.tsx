@@ -46,7 +46,7 @@ export const Packages: React.FC = () => {
                 >
                   <SwiperSlide>
                     <Image
-                      // quality={25}
+                      quality={25}
                       placeholder="blur"
                       src={ZooPicnic1}
                       alt="Zoo Picnic"
@@ -55,7 +55,7 @@ export const Packages: React.FC = () => {
                   </SwiperSlide>
                   <SwiperSlide>
                     <Image
-                      // quality={25}
+                      quality={25}
                       placeholder="blur"
                       src={ZooPicnic2}
                       alt="Zoo Picnic"
@@ -85,7 +85,7 @@ export const Packages: React.FC = () => {
                 >
                   <SwiperSlide className={classes.slide}>
                     <Image
-                      // quality={25}
+                      quality={25}
                       placeholder="blur"
                       src={SeaPicnic}
                       alt="Under The Sea"
@@ -94,7 +94,7 @@ export const Packages: React.FC = () => {
                   </SwiperSlide>
                   <SwiperSlide className={classes.slide}>
                     <Image
-                      // quality={25}
+                      quality={25}
                       placeholder="blur"
                       src={SeaPicnic1}
                       alt="Under The Sea"
@@ -103,7 +103,7 @@ export const Packages: React.FC = () => {
                   </SwiperSlide>
                   <SwiperSlide className={classes.slide}>
                     <Image
-                      // quality={25}
+                      quality={25}
                       placeholder="blur"
                       src={SeaPicnic2}
                       alt="Under The Sea"
@@ -137,7 +137,7 @@ export const Packages: React.FC = () => {
                 >
                   <SwiperSlide className={classes.slide}>
                     <Image
-                      // quality={25}
+                      quality={25}
                       placeholder="blur"
                       src={Romantic}
                       alt="Romantic Getaway"
@@ -170,7 +170,7 @@ export const Packages: React.FC = () => {
                 >
                   <SwiperSlide className={classes.slide}>
                     <Image
-                      // quality={25}
+                      quality={25}
                       placeholder="blur"
                       src={Boho}
                       alt="Boho Picnic"
@@ -179,7 +179,7 @@ export const Packages: React.FC = () => {
                   </SwiperSlide>
                   <SwiperSlide className={classes.slide}>
                     <Image
-                      // quality={25}
+                      quality={25}
                       placeholder="blur"
                       src={Boho1}
                       alt="Boho Picnic"
