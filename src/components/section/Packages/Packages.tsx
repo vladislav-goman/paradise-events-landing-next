@@ -3,10 +3,9 @@ import React from 'react';
 import Image from 'next/image';
 import classes from './Packages.module.scss';
 import cx from 'classnames';
-import { Autoplay, Pagination } from 'swiper';
+import { Pagination } from 'swiper';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
-import 'swiper/css/autoplay';
 import SeaPicnic from '../../../images/under1.jpg';
 import SeaPicnic1 from '../../../images/under2.jpg';
 import SeaPicnic2 from '../../../images/under3.jpg';
@@ -30,10 +29,9 @@ export const Packages: React.FC = () => {
             <div className={classes.row}>
               <div data-animate="animate__fadeIn" className={classes.card}>
                 <Swiper
-                  autoplay={{ delay: 3000, disableOnInteraction: true }}
                   spaceBetween={70}
                   slidesPerView={1}
-                  modules={[Autoplay, Pagination]}
+                  modules={[Pagination]}
                   pagination={{
                     el: '#zoo-pagination',
                     clickable: true,
@@ -70,10 +68,9 @@ export const Packages: React.FC = () => {
               </div>
               <div data-animate="animate__fadeIn" className={classes.card}>
                 <Swiper
-                  autoplay={{ delay: 4000, disableOnInteraction: true }}
                   spaceBetween={70}
                   slidesPerView={1}
-                  modules={[Autoplay, Pagination]}
+                  modules={[Pagination]}
                   pagination={{
                     el: '#under-pagination',
                     clickable: true,
@@ -123,10 +120,9 @@ export const Packages: React.FC = () => {
             <div className={classes.row}>
               <div data-animate="animate__fadeIn" className={classes.card}>
                 <Swiper
-                  autoplay={{ delay: 5000, disableOnInteraction: true }}
                   spaceBetween={70}
                   slidesPerView={1}
-                  modules={[Autoplay, Pagination]}
+                  modules={[Pagination]}
                   pagination={{
                     el: '#romantic-pagination',
                     clickable: true,
@@ -157,10 +153,9 @@ export const Packages: React.FC = () => {
               </div>
               <div data-animate="animate__fadeIn" className={classes.card}>
                 <Swiper
-                  autoplay={{ delay: 6000, disableOnInteraction: true }}
                   spaceBetween={70}
                   slidesPerView={1}
-                  modules={[Autoplay, Pagination]}
+                  modules={[Pagination]}
                   pagination={{
                     el: '#boho-pagination',
                     clickable: true,
