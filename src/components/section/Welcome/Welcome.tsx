@@ -37,7 +37,7 @@ export const Welcome: React.FC = () => {
           <div className="col-lg-5">
             <div className={classes.image__container}>
               <Image
-                quality={25}
+                // quality={25}
                 placeholder="blur"
                 src={welcomeImage}
                 layout="fill"

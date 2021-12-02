@@ -9,7 +9,7 @@ export const Footer: React.FC = () => {
           <div className="col-md-12">
             <div className={classes.inner}>
               <h2 className={classes.header}>
-                © Paradise Events Planner <br /> 2021
+                © Paradise Events Planner <br /> Copyright 2021 <br />
               </h2>
             </div>
           </div>
