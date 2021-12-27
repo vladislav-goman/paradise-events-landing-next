@@ -118,13 +118,13 @@ export const Header: React.FC = () => {
                 >
                   Picnic packages
                 </AnchorLink>
-                {/* <AnchorLink
+                <AnchorLink
                   offset="50"
                   href="#gallery"
                   className={classes.link}
                 >
                   Gallery
-                </AnchorLink> */}
+                </AnchorLink>
                 <AnchorLink
                   offset="50"
                   href="#contact"
@@ -159,14 +159,14 @@ export const Header: React.FC = () => {
                   >
                     Picnic packages
                   </AnchorLink>
-                  {/* <AnchorLink
+                  <AnchorLink
                     offset="30"
                     href="#gallery"
                     className={classes.link}
                     onClick={onLinkClickHandler}
                   >
                     Gallery
-                  </AnchorLink> */}
+                  </AnchorLink>
                   <AnchorLink
                     offset="30"
                     href="#contact"

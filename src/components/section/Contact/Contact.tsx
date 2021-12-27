@@ -21,7 +21,8 @@ export const Contact: React.FC = () => {
           <div className="col-md-6">
             <form
               data-animate="animate__fadeInLeft"
-              action=""
+              action="/api/email"
+              method="POST"
               className={classes.form}
             >
               <h3 className={classes.description}>
@@ -52,7 +53,6 @@ export const Contact: React.FC = () => {
                   name="mobile"
                   type="tel"
                   placeholder="888 888 8888"
-                  pattern="[0-9]{3} [0-9]{3} [0-9]{4}"
                   className={classes.input}
                 />
               </div>
