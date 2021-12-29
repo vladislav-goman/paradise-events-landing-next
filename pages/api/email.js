@@ -9,9 +9,8 @@ const transporter = nodemailer.createTransport({
 });
 
 const emailHandler = async (req, res) => {
-  console.log(req.body);
   if (req.method === 'POST') {
-    const { name, mobile } = req.body;
+    const { name, tel } = req.body;
 
     let info = await transporter.sendMail({
       from: '"ParadiseEventsPlanner"', // sender address
@@ -21,14 +20,15 @@ const emailHandler = async (req, res) => {
       <p>Somebody has just submitted contact form on <a href="www.paradiseeventsplanner.com">www.paradiseeventsplanner.com</a>.</p>
       <p> Contact details: </p>
       <p>Name: ${name} </p>
-      <p>Telephone number: ${mobile} </p>
+      <p>Telephone number: ${tel} </p>
       <p>Kindest regards, </p>
       <p> paradiseeventsplanner web site </p>`, // html body
     });
 
     console.log(info);
 
-    return res.redirect(307, '/#contact');
+    res.status(200);
+    return res.end();
   }
 };
 

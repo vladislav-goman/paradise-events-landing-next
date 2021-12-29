@@ -29,7 +29,7 @@ export const Welcome: React.FC = () => {
               <h1 className={classes.header}>
                 Brighten up your event with Paradise Events Planner
               </h1>
-              <AnchorLink offset="94" href="#contact" className={classes.link}>
+              <AnchorLink offset="50" href="#contact" className={classes.link}>
                 <div className={classes.label}>Book now</div>
               </AnchorLink>
             </div>

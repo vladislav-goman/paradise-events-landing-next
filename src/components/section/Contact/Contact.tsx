@@ -1,13 +1,45 @@
-import React from 'react';
+import React, { ChangeEvent, FormEventHandler, useState } from 'react';
 import Image from 'next/image';
 import classes from './Contact.module.scss';
 import EmailIcon from '../../../images/EmailIcon.png';
 import InstagramIcon from '../../../images/InstagramIcon.png';
 import FacebookIcon from '../../../images/FacebookIcon.png';
+import { Dialog } from '../../common/Dialog';
 
 export const Contact: React.FC = () => {
+  const [name, setName] = useState('');
+  const [tel, setTel] = useState('');
+  const [showDialog, setShowDialog] = useState(false);
+
+  const handleNameChange = ({ target }: ChangeEvent<HTMLInputElement>) =>
+    setName(target.value);
+  const handleTelChange = ({ target }: ChangeEvent<HTMLInputElement>) =>
+    setTel(target.value);
+  const handleDialogClose = () => setShowDialog(false);
+
+  const formSubmitHandler: FormEventHandler = (event) => {
+    event.preventDefault();
+    fetch('/api/email', {
+      method: 'POST',
+      body: JSON.stringify({ name, tel }),
+      headers: {
+        'Content-Type': 'application/json',
+      },
+    })
+      .then(() => {
+        setShowDialog(true);
+      })
+      .catch((err) => {
+        console.log(err);
+        setShowDialog(true);
+      });
+    setName('');
+    setTel('');
+  };
+
   return (
     <section className={classes.contact} id="contact">
+      <Dialog open={showDialog} onOpenChange={handleDialogClose} />
       <div className="container">
         <div className="row">
           <div className="col-md-12">
@@ -21,8 +53,7 @@ export const Contact: React.FC = () => {
           <div className="col-md-6">
             <form
               data-animate="animate__fadeInLeft"
-              action="/api/email"
-              method="POST"
+              onSubmit={formSubmitHandler}
               className={classes.form}
             >
               <h3 className={classes.description}>
@@ -35,6 +66,8 @@ export const Contact: React.FC = () => {
                   Name
                 </label>
                 <input
+                  onChange={handleNameChange}
+                  value={name}
                   required
                   id="nameInput"
                   name="name"
@@ -48,6 +81,8 @@ export const Contact: React.FC = () => {
                   Mobile Number
                 </label>
                 <input
+                  onChange={handleTelChange}
+                  value={tel}
                   required
                   id="mobile"
                   name="mobile"

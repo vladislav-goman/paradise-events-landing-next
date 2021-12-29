@@ -9,6 +9,8 @@
   },
   "dependencies": {
     "@radix-ui/react-accordion": "^0.1.1",
+    "@radix-ui/react-dialog": "^0.1.5",
+    "@radix-ui/react-icons": "^1.0.3",
     "@radix-ui/react-id": "^0.1.1",
     "animate.css": "^4.1.1",
     "bootstrap": "^5.1.3",
