@@ -8,6 +8,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@aws-sdk/client-sns": "^3.46.0",
     "@radix-ui/react-accordion": "^0.1.1",
     "@radix-ui/react-dialog": "^0.1.5",
     "@radix-ui/react-icons": "^1.0.3",
